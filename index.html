@@ -18,12 +18,16 @@
       </a>
       
       <div class="top-search">
-        <input type="text" placeholder="Busca productos, marcas o tiendas..." onkeypress="if(event.key==='Enter')window.location.href='search.html?q='+this.value">
+        <input type="text" data-i18n-placeholder="searchPlaceholder" placeholder="Busca productos, marcas o tiendas..." onkeypress="if(event.key==='Enter')window.location.href='search.html?q='+this.value">
         <button class="search-btn">🔍</button>
       </div>
       
       <div class="top-user">
-        <a href="search.html" class="user-icon">🔍</a>
+        <div class="lang-switcher">
+          <button class="lang-btn" data-lang="es">ES</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="zh">中文</button>
+        </div>
       </div>
     </div>
   </header>
@@ -31,10 +35,10 @@
   <!-- 主导航栏 -->
   <nav class="main-nav">
     <div class="container">
-      <a href="index.html" class="nav-item active">首页</a>
-      <a href="#ofertas" class="nav-item">好价</a>
-      <a href="#guias" class="nav-item">指南文章</a>
-      <a href="black-friday-2026-peru.html" class="nav-item">黑五</a>
+      <a href="index.html" class="nav-item active" data-i18n="navHome">首页</a>
+      <a href="#ofertas" class="nav-item" data-i18n="navDeals">好价</a>
+      <a href="#guias" class="nav-item" data-i18n="navGuides">指南文章</a>
+      <a href="black-friday-2026-peru.html" class="nav-item" data-i18n="navBlackFriday">黑五</a>
     </div>
   </nav>
 
@@ -44,7 +48,7 @@
     <!-- 左侧分类侧边栏 -->
     <aside class="sidebar">
       <div class="sidebar-section">
-        <div class="sidebar-title">🔥 热门推荐</div>
+        <div class="sidebar-title" data-i18n="hotRecommended">🔥 热门推荐</div>
         <ul class="sidebar-list">
           <li><a href="search.html?q=celular">📱 手机通讯</a></li>
           <li><a href="search.html?q=laptop">💻 电脑办公</a></li>
@@ -54,7 +58,7 @@
       </div>
       
       <div class="sidebar-section">
-        <div class="sidebar-title">🏷️ 全部分类</div>
+        <div class="sidebar-title" data-i18n="allCategories">🏷️ 全部分类</div>
         <ul class="sidebar-list">
           <li><a href="search.html?q=celular">📱 手机 / 配件</a></li>
           <li><a href="search.html?q=laptop">💻 电脑 / 办公</a></li>
@@ -81,7 +85,7 @@
 
       <!-- 好价商品流 -->
       <section id="ofertas" class="section">
-        <h2 class="section-title">⚡ 今日好价</h2>
+        <h2 class="section-title" data-i18n="dealsToday">⚡ 今日好价</h2>
         <div class="deals-grid">
           
           <div class="deal-card">
@@ -153,7 +157,7 @@
 
       <!-- 选购指南文章 -->
       <section id="guias" class="section">
-        <h2 class="section-title">📚 选购指南和评测</h2>
+        <h2 class="section-title" data-i18n="guidesTitle">📚 选购指南和评测</h2>
         <div class="articles-list">
           
           <a href="black-friday-2026-peru.html" class="article-item">
@@ -201,12 +205,12 @@
 
       <!-- 邮件订阅 -->
       <section class="newsletter-box">
-        <h3>📬 Recibe las mejores ofertas</h3>
-        <p>Te enviamos solo las ofertas que realmente valen la pena, una vez a la semana. Sin spam.</p>
+        <h3 data-i18n="newsletterTitle">📬 Recibe las mejores ofertas</h3>
+        <p data-i18n="newsletterDesc">Te enviamos solo las ofertas que realmente valen la pena, una vez a la semana. Sin spam.</p>
         <form action="https://formspree.io/f/xgaodgan" method="POST">
           <input type="hidden" name="_subject" value="Nueva suscripción a MiraIdeal!">
           <input type="email" name="email" placeholder="Tu correo electrónico" required>
-          <button type="submit">Suscribirme</button>
+          <button type="submit" data-i18n="subscribeBtn">Suscribirme</button>
         </form>
       </section>
 
@@ -243,5 +247,6 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="i18n.js"></script>
 </body>
 </html>
