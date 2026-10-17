@@ -357,5 +357,47 @@
   </footer>
 
   <script src="main.js"></script>
+  
+  <!-- 实时价格加载 -->
+  <script>
+    async function loadRealTimePrices() {
+      try {
+        const res = await fetch('/api/price');
+        const data = await res.json();
+        
+        if (data.success) {
+          // 更新每个商品的价格
+          data.data.forEach(product => {
+            // 找对应的商品卡片
+            const cards = document.querySelectorAll('.oferta-item');
+            cards.forEach(card => {
+              const nameEl = card.querySelector('h4');
+              if (nameEl && nameEl.textContent.includes(product.name.split(' ')[0])) {
+                // 更新价格
+                const priceEl = card.querySelector('.precio-actual');
+                if (priceEl) {
+                  priceEl.textContent = 'S/ ' + product.price.toLocaleString();
+                }
+                // 更新最后更新时间
+                let updateTimeEl = card.querySelector('.update-time');
+                if (!updateTimeEl) {
+                  updateTimeEl = document.createElement('span');
+                  updateTimeEl.className = 'update-time';
+                  updateTimeEl.style.cssText = 'font-size: 11px; color: #27ae60; margin-left: 8px;';
+                  card.querySelector('.articulo-meta, .oferta-info').appendChild(updateTimeEl);
+                }
+                updateTimeEl.textContent = '🔄 Actualizado';
+              }
+            });
+          });
+        }
+      } catch (error) {
+        console.log('实时价格加载失败，使用默认价格:', error);
+      }
+    }
+    
+    // 页面加载完成后获取实时价格
+    window.addEventListener('load', loadRealTimePrices);
+  </script>
 </body>
 </html>
