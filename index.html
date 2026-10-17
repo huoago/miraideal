@@ -3,320 +3,215 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MiraIdeal — Compara Precios y Compra Mejor en Perú</title>
+  <title>MiraIdeal — Ofertas y Comparación de Precios en Perú</title>
   <meta name="description" content="MiraIdeal te ayuda a encontrar el mejor precio antes de comprar. Compara ofertas de Mercado Libre, Falabella, Ripley y más tiendas peruanas.">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo">Mira<span>Ideal</span></a>
+  <!-- 顶部Header - 完全参考什么值得买 -->
+  <header class="top-header">
+    <div class="container top-header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">M</span>
+        <span class="logo-text">Mira<strong>Ideal</strong></span>
+      </a>
       
-      <div class="header-search">
-        <input type="text" placeholder="Busca productos, marcas o categorías..." onkeypress="if(event.key==='Enter')window.location.href='search.html?q='+this.value">
+      <div class="top-search">
+        <input type="text" placeholder="Busca productos, marcas o tiendas..." onkeypress="if(event.key==='Enter')window.location.href='search.html?q='+this.value">
+        <button class="search-btn">🔍</button>
       </div>
       
-      <nav class="nav">
-        <a href="#ofertas">Ofertas</a>
-        <a href="#guias">Guías</a>
-        <a href="search.html">Buscar</a>
-      </nav>
+      <div class="top-user">
+        <a href="search.html" class="user-icon">🔍</a>
+      </div>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
+  <!-- 主导航栏 -->
+  <nav class="main-nav">
     <div class="container">
-      <div class="hero-badge">🔥 Actualizado diariamente</div>
-      <h1>Encuentra el mejor precio antes de comprar</h1>
-      <p>Comparamos ofertas de las principales tiendas de Perú para que tomes la mejor decisión. Producto + envío + impuestos = precio real.</p>
+      <a href="index.html" class="nav-item active">首页</a>
+      <a href="#ofertas" class="nav-item">好价</a>
+      <a href="#guias" class="nav-item">指南文章</a>
+      <a href="black-friday-2026-peru.html" class="nav-item">黑五</a>
     </div>
-  </section>
+  </nav>
 
-  <!-- Categorías -->
-  <section class="section" id="categorias">
-    <div class="container">
-      <h2 class="section-title">Explora por categoría</h2>
-      <div class="categorias-grid">
-        <a href="search.html?q=celular" class="categoria-card">
-          <div class="categoria-icon">📱</div>
-          <h3>Celulares</h3>
-        </a>
-        <a href="search.html?q=laptop" class="categoria-card">
-          <div class="categoria-icon">💻</div>
-          <h3>Laptops</h3>
-        </a>
-        <a href="search.html?q=tv" class="categoria-card">
-          <div class="categoria-icon">📺</div>
-          <h3>Televisores</h3>
-        </a>
-        <a href="search.html?q=hogar" class="categoria-card">
-          <div class="categoria-icon">🏠</div>
-          <h3>Hogar y Electrodomésticos</h3>
-        </a>
-        <a href="search.html?q=audio" class="categoria-card">
-          <div class="categoria-icon">🎮</div>
-          <h3>Audio y Wearables</h3>
-        </a>
-        <a href="search.html?q=seguridad" class="categoria-card">
-          <div class="categoria-icon">👟</div>
-          <h3>Seguridad</h3>
-        </a>
+  <!-- 主内容区 - 双栏布局 -->
+  <div class="container main-container">
+    
+    <!-- 左侧分类侧边栏 -->
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-title">🔥 热门推荐</div>
+        <ul class="sidebar-list">
+          <li><a href="search.html?q=celular">📱 手机通讯</a></li>
+          <li><a href="search.html?q=laptop">💻 电脑办公</a></li>
+          <li><a href="search.html?q=tv">📺 家用电器</a></li>
+          <li><a href="search.html?q=audio">🎧 音频设备</a></li>
+        </ul>
       </div>
-    </div>
-  </section>
-
-  <!-- Ofertas Destacadas -->
-  <section class="section" id="ofertas" style="background: #fff;">
-    <div class="container">
-      <h2 class="section-title">Ofertas destacadas de hoy</h2>
-      <div class="ofertas-list">
-
-        <div class="oferta-item">
-          <div class="oferta-store">ML</div>
-          <div class="oferta-info">
-            <h4>Samsung Galaxy S24 Ultra 512GB</h4>
-            <p>Envío gratis · Mercado Libre Perú</p>
-          </div>
-          <div class="oferta-precio">
-            <div class="precio-anterior">S/ 5,299</div>
-            <div class="precio-actual">S/ 3,899</div>
-          </div>
-          <span class="descuento-badge">-26%</span>
-          <a href="https://www.mercadolibre.com.pe/" target="_blank" class="btn-oferta">Ver oferta</a>
-        </div>
-
-        <div class="oferta-item">
-          <div class="oferta-store">FA</div>
-          <div class="oferta-info">
-            <h4>LG OLED evo C4 55" 4K Smart TV</h4>
-            <p>Despacho a todo Lima · Falabella</p>
-          </div>
-          <div class="oferta-precio">
-            <div class="precio-anterior">S/ 4,899</div>
-            <div class="precio-actual">S/ 3,499</div>
-          </div>
-          <span class="descuento-badge">-29%</span>
-          <a href="https://www.falabella.com.pe/" target="_blank" class="btn-oferta">Ver oferta</a>
-        </div>
-
-        <div class="oferta-item">
-          <div class="oferta-store">RP</div>
-          <div class="oferta-info">
-            <h4>Lenovo Legion 5 Gaming Laptop RTX 4060</h4>
-            <p>Cuotas sin interés · Ripley</p>
-          </div>
-          <div class="oferta-precio">
-            <div class="precio-anterior">S/ 5,499</div>
-            <div class="precio-actual">S/ 4,299</div>
-          </div>
-          <span class="descuento-badge">-22%</span>
-          <a href="https://www.ripley.com.pe/" target="_blank" class="btn-oferta">Ver oferta</a>
-        </div>
-
-        <div class="oferta-item">
-          <div class="oferta-store">ML</div>
-          <div class="oferta-info">
-            <h4>Xiaomi Robot Vacuum X20+ Aspirador</h4>
-            <p>Envío gratis a nivel nacional</p>
-          </div>
-          <div class="oferta-precio">
-            <div class="precio-anterior">S/ 2,199</div>
-            <div class="precio-actual">S/ 1,499</div>
-          </div>
-          <span class="descuento-badge">-32%</span>
-          <a href="https://www.mercadolibre.com.pe/" target="_blank" class="btn-oferta">Ver oferta</a>
-        </div>
-
+      
+      <div class="sidebar-section">
+        <div class="sidebar-title">🏷️ 全部分类</div>
+        <ul class="sidebar-list">
+          <li><a href="search.html?q=celular">📱 手机 / 配件</a></li>
+          <li><a href="search.html?q=laptop">💻 电脑 / 办公</a></li>
+          <li><a href="search.html?q=tv">📺 电视 / 大家电</a></li>
+          <li><a href="search.html?q=hogar">🏠 小家电 / 家居</a></li>
+          <li><a href="search.html?q=audio">🎧 耳机 / 音箱</a></li>
+          <li><a href="search.html?q=seguridad">🏠 安防 / 监控</a></li>
+          <li><a href="search.html?q=tablet">📱 平板 / 智能设备</a></li>
+          <li><a href="search.html?q=reloj">⌚ 智能手表 / 穿戴</a></li>
+          <li><a href="search.html?q=cocina">🍳 厨房 / 烹饪</a></li>
+          <li><a href="search.html?q=aire">❄️ 空调 / 制冷</a></li>
+        </ul>
       </div>
-    </div>
-  </section>
+    </aside>
 
-  <!-- Guías de Compra -->
-  <section class="section" id="guias">
-    <div class="container">
-      <h2 class="section-title">Guías de compra y análisis</h2>
-      <div class="articulos-grid">
+    <!-- 右侧主内容区 -->
+    <main class="main-content">
+      
+      <!-- 大Banner区 -->
+      <section class="hero-banner">
+        <h1>🔥 Las Mejores Ofertas del Día</h1>
+        <p>Comparamos precios en todas las tiendas de Perú para que compres mejor</p>
+      </section>
 
-        <article class="articulo-card">
-          <div class="articulo-img ofertas">🛒</div>
-          <div class="articulo-body">
-            <span class="articulo-tag">Black Friday</span>
-            <h3><a href="black-friday-2026-peru.html">Black Friday 2026 Perú: Guía completa de ofertas y fechas</a></h3>
-            <p class="articulo-excerpt">Todo lo que necesitas saber sobre el Black Friday peruano: fechas, tiendas participantes, categorías con mejores descuentos.</p>
-            <div class="articulo-meta">
+      <!-- 好价商品流 -->
+      <section id="ofertas" class="section">
+        <h2 class="section-title">⚡ 今日好价</h2>
+        <div class="deals-grid">
+          
+          <div class="deal-card">
+            <div class="deal-store store-ML">Mercado Libre</div>
+            <div class="deal-product">
+              <div class="deal-icon">📱</div>
+              <div class="deal-info">
+                <h3>Samsung Galaxy S24 Ultra 512GB</h3>
+                <div class="deal-price-row">
+                  <span class="deal-price-now">S/ 3,899</span>
+                  <span class="deal-price-old">S/ 5,299</span>
+                  <span class="deal-discount">-26%</span>
+                </div>
+                <a href="https://www.mercadolibre.com.pe/" target="_blank" class="deal-btn">Ver oferta →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="deal-card">
+            <div class="deal-store store-FA">Falabella</div>
+            <div class="deal-product">
+              <div class="deal-icon">📺</div>
+              <div class="deal-info">
+                <h3>LG OLED evo C4 55" 4K Smart TV</h3>
+                <div class="deal-price-row">
+                  <span class="deal-price-now">S/ 3,499</span>
+                  <span class="deal-price-old">S/ 4,899</span>
+                  <span class="deal-discount">-29%</span>
+                </div>
+                <a href="https://www.falabella.com.pe/" target="_blank" class="deal-btn">Ver oferta →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="deal-card">
+            <div class="deal-store store-RP">Ripley</div>
+            <div class="deal-product">
+              <div class="deal-icon">💻</div>
+              <div class="deal-info">
+                <h3>Lenovo Legion 5 Laptop RTX 4060</h3>
+                <div class="deal-price-row">
+                  <span class="deal-price-now">S/ 4,299</span>
+                  <span class="deal-price-old">S/ 5,499</span>
+                  <span class="deal-discount">-22%</span>
+                </div>
+                <a href="https://www.ripley.com.pe/" target="_blank" class="deal-btn">Ver oferta →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="deal-card">
+            <div class="deal-store store-ML">Mercado Libre</div>
+            <div class="deal-product">
+              <div class="deal-icon">🤖</div>
+              <div class="deal-info">
+                <h3>Xiaomi Robot Vacuum X20+ Aspirador</h3>
+                <div class="deal-price-row">
+                  <span class="deal-price-now">S/ 1,499</span>
+                  <span class="deal-price-old">S/ 2,199</span>
+                  <span class="deal-discount">-32%</span>
+                </div>
+                <a href="https://www.mercadolibre.com.pe/" target="_blank" class="deal-btn">Ver oferta →</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 选购指南文章 -->
+      <section id="guias" class="section">
+        <h2 class="section-title">📚 选购指南和评测</h2>
+        <div class="articles-list">
+          
+          <a href="black-friday-2026-peru.html" class="article-item">
+            <div class="article-tag">Black Friday</div>
+            <h3>Black Friday 2026 Perú: Guía completa de ofertas y fechas</h3>
+            <p class="article-excerpt">Todo lo que necesitas saber sobre el Black Friday peruano: fechas, tiendas participantes, categorías con mejores descuentos.</p>
+            <div class="article-meta">
               <span>12 Oct 2026</span>
-              <span class="precio-badge">Guía completa</span>
+              <span>Guía completa</span>
             </div>
-          </div>
-        </article>
+          </a>
 
-        <article class="articulo-card">
-          <div class="articulo-img electronica">📱</div>
-          <div class="articulo-body">
-            <span class="articulo-tag">Celulares</span>
-            <h3><a href="iphone-17-donde-comprar.html">iPhone 17 Pro: ¿Dónde comprarlo más barato en Perú?</a></h3>
-            <p class="articulo-excerpt">Comparamos precios en Mercado Libre, Falabella, Ripley y tiendas oficiales. Incluye costo total con envío e impuestos.</p>
-            <div class="articulo-meta">
+          <a href="iphone-17-donde-comprar.html" class="article-item">
+            <div class="article-tag">Celulares</div>
+            <h3>iPhone 17 Pro: ¿Dónde comprarlo más barato en Perú?</h3>
+            <p class="article-excerpt">Comparamos precios en Mercado Libre, Falabella, Ripley y tiendas oficiales. Incluye costo total con envío e impuestos.</p>
+            <div class="article-meta">
               <span>10 Oct 2026</span>
-              <span class="descuento-badge">4 tiendas comparadas</span>
+              <span>4 tiendas comparadas</span>
             </div>
-          </div>
-        </article>
+          </a>
 
-        <article class="articulo-card">
-          <div class="articulo-img hogar">💻</div>
-          <div class="articulo-body">
-            <span class="articulo-tag">Laptops</span>
-            <h3><a href="mejores-laptops-2000-soles.html">Mejores laptops por S/ 2000 en 2026</a></h3>
-            <p class="articulo-excerpt">Ranking de las mejores laptops calidad-precio para estudio y trabajo. Lenovo, HP, Asus y Dell comparadas.</p>
-            <div class="articulo-meta">
+          <a href="mejores-laptops-2000-soles.html" class="article-item">
+            <div class="article-tag">Laptops</div>
+            <h3>Mejores laptops por S/ 2000 en 2026</h3>
+            <p class="article-excerpt">Ranking de las mejores laptops calidad-precio para estudio y trabajo. Lenovo, HP, Asus y Dell comparadas.</p>
+            <div class="article-meta">
               <span>15 Oct 2026</span>
-              <span class="precio-badge">Top 5</span>
+              <span>Top 5</span>
             </div>
-          </div>
-        </article>
+          </a>
 
-        <article class="articulo-card">
-          <div class="articulo-img gaming">📺</div>
-          <div class="articulo-body">
-            <span class="articulo-tag">Televisores</span>
-            <h3><a href="tcl-vs-samsung-lg-tv.html">TCL vs Samsung vs LG: ¿Qué TV conviene?</a></h3>
-            <p class="articulo-excerpt">Comparativa de las marcas de TV más vendidas en Perú. Calidad de imagen, precio, garantía y cuál elegir.</p>
-            <div class="articulo-meta">
+          <a href="tcl-vs-samsung-lg-tv.html" class="article-item">
+            <div class="article-tag">Televisores</div>
+            <h3>TCL vs Samsung vs LG: ¿Qué TV conviene?</h3>
+            <p class="article-excerpt">Comparativa de las marcas de TV más vendidas en Perú. Calidad de imagen, precio, garantía y cuál elegir.</p>
+            <div class="article-meta">
               <span>14 Oct 2026</span>
-              <span class="precio-badge">Comparativa</span>
+              <span>Comparativa</span>
             </div>
-          </div>
-        </article>
+          </a>
 
-        <article class="articulo-card">
-          <div class="articulo-img hogar">🤖</div>
-          <div class="articulo-body">
-            <span class="articulo-tag">Hogar</span>
-            <h3><a href="mejores-aspiradoras-robot.html">Mejores aspiradoras robot en Perú 2026</a></h3>
-            <p class="articulo-excerpt">Xiaomi, Roborock y más. Cuál comprar según tu presupuesto y tamaño de departamento.</p>
-            <div class="articulo-meta">
-              <span>13 Oct 2026</span>
-              <span class="precio-badge">Top 3</span>
-            </div>
-          </div>
-        </article>
+        </div>
+      </section>
 
-        <article class="articulo-card">
-          <div class="articulo-img electronica">🎧</div>
-          <div class="articulo-body">
-            <span class="articulo-tag">Audio</span>
-            <h3><a href="mejores-audifonos-bluetooth.html">Mejores audífonos Bluetooth calidad-precio</a></h3>
-            <p class="articulo-excerpt">Los mejores TWS en Perú por menos de S/ 300. Sony, JBL, Redmi y Soundcore comparados.</p>
-            <div class="articulo-meta">
-              <span>12 Oct 2026</span>
-              <span class="precio-badge">Top 4</span>
-            </div>
-          </div>
-        </article>
+      <!-- 邮件订阅 -->
+      <section class="newsletter-box">
+        <h3>📬 Recibe las mejores ofertas</h3>
+        <p>Te enviamos solo las ofertas que realmente valen la pena, una vez a la semana. Sin spam.</p>
+        <form action="https://formspree.io/f/xgaodgan" method="POST">
+          <input type="hidden" name="_subject" value="Nueva suscripción a MiraIdeal!">
+          <input type="email" name="email" placeholder="Tu correo electrónico" required>
+          <button type="submit">Suscribirme</button>
+        </form>
+      </section>
 
-        <article class="articulo-card">
-          <div class="articulo-img hogar">🍟</div>
-          <div class="articulo-body">
-            <span class="articulo-tag">Cocina</span>
-            <h3><a href="mejores-freidoras-aire.html">Freidora de aire: ¿Vale la pena comprar una?</a></h3>
-            <p class="articulo-excerpt">Guía completa: qué capacidad necesitas, qué marcas comprar y cuánto deberías pagar en Perú.</p>
-            <div class="articulo-meta">
-              <span>11 Oct 2026</span>
-              <span class="precio-badge">Guía</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="articulo-card">
-          <div class="articulo-img electronica">📱</div>
-          <div class="articulo-body">
-            <span class="articulo-tag">Celulares</span>
-            <h3><a href="celulares-menos-1500-soles.html">Qué celular comprar por menos de S/ 1500</a></h3>
-            <p class="articulo-excerpt">Los mejores celulares gama media-baja en Perú. Samsung, Xiaomi, Motorola comparados.</p>
-            <div class="articulo-meta">
-              <span>10 Oct 2026</span>
-              <span class="descuento-badge">Top 5</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="articulo-card">
-          <div class="articulo-img hogar">🏠</div>
-          <div class="articulo-body">
-            <span class="articulo-tag">Seguridad</span>
-            <h3><a href="camaras-seguridad-casa.html">Cámaras de seguridad para casa: Guía 2026</a></h3>
-            <p class="articulo-excerpt">Xiaomi, TP-Link, EZVIZ. Qué características buscar y cuáles son las mejores opciones en Perú.</p>
-            <div class="articulo-meta">
-              <span>9 Oct 2026</span>
-              <span class="precio-badge">Guía</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="articulo-card">
-          <div class="articulo-img electronica">📱</div>
-          <div class="articulo-body">
-            <span class="articulo-tag">Tablets</span>
-            <h3><a href="mejores-tablets-estudiar.html">Mejores tablets para estudiar en Perú</a></h3>
-            <p class="articulo-excerpt">Galaxy Tab, iPad, Xiaomi Pad. Cuál conviene para tomar apuntes y clases online.</p>
-            <div class="articulo-meta">
-              <span>8 Oct 2026</span>
-              <span class="precio-badge">Top 4</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="articulo-card">
-          <div class="articulo-img electronica">⌚</div>
-          <div class="articulo-body">
-            <span class="articulo-tag">Wearables</span>
-            <h3><a href="mejores-smartwatch-peru.html">Smartwatch: ¿Cuál comprar en Perú?</a></h3>
-            <p class="articulo-excerpt">Por rango de precio: desde Xiaomi hasta Apple Watch. Cuál vale la pena según tu uso.</p>
-            <div class="articulo-meta">
-              <span>7 Oct 2026</span>
-              <span class="precio-badge">Guía</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="articulo-card">
-          <div class="articulo-img hogar">❄️</div>
-          <div class="articulo-body">
-            <span class="articulo-tag">Hogar</span>
-            <h3><a href="aire-acondicionado-split-vs-portatil.html">Aire Acondicionado: Split vs Portátil</a></h3>
-            <p class="articulo-excerpt">Cuál conviene según tu caso. Comparativa de precio, consumo y potencia de enfriamiento.</p>
-            <div class="articulo-meta">
-              <span>6 Oct 2026</span>
-              <span class="precio-badge">Comparativa</span>
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Newsletter -->
-  <section class="section" style="background: linear-gradient(135deg, #FF6B35 0%, #E74C3C 100%); color: white; text-align: center;">
-    <div class="container">
-      <h2 style="font-size: 28px; margin-bottom: 12px;">📬 Recibe las mejores ofertas</h2>
-      <p style="opacity: 0.95; margin-bottom: 24px; max-width: 500px; margin-left: auto; margin-right: auto;">
-        Te enviamos solo las ofertas que realmente valen la pena, una vez a la semana. Sin spam.
-      </p>
-      <form action="https://formspree.io/f/xgaodgan" method="POST" style="max-width: 400px; margin: 0 auto; display: flex; gap: 8px;">
-        <input type="hidden" name="_subject" value="Nueva suscripción a MiraIdeal!">
-        <input type="email" name="email" placeholder="Tu correo electrónico" required style="flex: 1; padding: 12px 16px; border: none; border-radius: 8px; font-size: 14px;">
-        <button type="submit" style="padding: 12px 24px; background: #2D3436; color: white; border: none; border-radius: 8px; font-weight: 600; cursor: pointer;">
-          Suscribirme
-        </button>
-      </form>
-      <p style="font-size: 12px; opacity: 0.8; margin-top: 12px;">Sin spam. Puedes darte de baja cuando quieras.</p>
-    </div>
-  </section>
+    </main>
+  </div>
 
   <!-- Footer -->
   <footer class="footer">
@@ -324,84 +219,29 @@
       <div class="footer-grid">
         <div>
           <h4>MiraIdeal</h4>
-          <p style="font-size: 14px; line-height: 1.7;">Comparamos precios de las principales tiendas de Perú para que compres mejor. Incluimos envío, impuestos y costos ocultos en cada comparación.</p>
+          <p style="font-size: 14px; line-height: 1.7;">Comparamos precios de las principales tiendas de Perú para que compres mejor.</p>
         </div>
         <div>
           <h4>Categorías</h4>
           <ul>
-            <li><a href="#">Celulares</a></li>
-            <li><a href="#">Laptops</a></li>
-            <li><a href="#">Televisores</a></li>
-            <li><a href="#">Hogar</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Tiendas</h4>
-          <ul>
-            <li><a href="#">Mercado Libre</a></li>
-            <li><a href="#">Falabella</a></li>
-            <li><a href="#">Ripley</a></li>
-            <li><a href="#">Amazon</a></li>
+            <li><a href="search.html?q=celular">Celulares</a></li>
+            <li><a href="search.html?q=laptop">Laptops</a></li>
+            <li><a href="search.html?q=tv">Televisores</a></li>
           </ul>
         </div>
         <div>
           <h4>Información</h4>
           <ul>
             <li><a href="about.html">Nosotros</a></li>
-            <li><a href="affiliate-disclosure.html">Divulgación de afiliados</a></li>
+            <li><a href="affiliate-disclosure.html">Divulgación</a></li>
             <li><a href="contacto.html">Contacto</a></li>
-            <li><a href="search.html">Buscar</a></li>
           </ul>
         </div>
       </div>
-      <div class="footer-bottom">
-        © 2026 MiraIdeal.com · Todos los derechos reservados · Hecho en Perú 🇵🇪
-      </div>
+      <div class="footer-bottom">© 2026 MiraIdeal.com · Hecho en Perú 🇵🇪</div>
     </div>
   </footer>
 
-  <script src="main.js"></script>
-  
-  <!-- 实时价格加载 -->
-  <script>
-    async function loadRealTimePrices() {
-      try {
-        const res = await fetch('/api/price');
-        const data = await res.json();
-        
-        if (data.success) {
-          // 更新每个商品的价格
-          data.data.forEach(product => {
-            // 找对应的商品卡片
-            const cards = document.querySelectorAll('.oferta-item');
-            cards.forEach(card => {
-              const nameEl = card.querySelector('h4');
-              if (nameEl && nameEl.textContent.includes(product.name.split(' ')[0])) {
-                // 更新价格
-                const priceEl = card.querySelector('.precio-actual');
-                if (priceEl) {
-                  priceEl.textContent = 'S/ ' + product.price.toLocaleString();
-                }
-                // 更新最后更新时间
-                let updateTimeEl = card.querySelector('.update-time');
-                if (!updateTimeEl) {
-                  updateTimeEl = document.createElement('span');
-                  updateTimeEl.className = 'update-time';
-                  updateTimeEl.style.cssText = 'font-size: 11px; color: #27ae60; margin-left: 8px;';
-                  card.querySelector('.articulo-meta, .oferta-info').appendChild(updateTimeEl);
-                }
-                updateTimeEl.textContent = '🔄 Actualizado';
-              }
-            });
-          });
-        }
-      } catch (error) {
-        console.log('实时价格加载失败，使用默认价格:', error);
-      }
-    }
-    
-    // 页面加载完成后获取实时价格
-    window.addEventListener('load', loadRealTimePrices);
-  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>
