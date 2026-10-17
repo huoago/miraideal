@@ -94,6 +94,39 @@ a:hover { color: var(--primary-dark); }
   font-size: 16px;
 }
 
+.top-user {
+  display: flex;
+  align-items: center;
+}
+
+.lang-switcher {
+  display: flex;
+  gap: 4px;
+  background: var(--light);
+  border-radius: 20px;
+  padding: 4px;
+}
+
+.lang-btn {
+  padding: 4px 12px;
+  border: none;
+  background: transparent;
+  border-radius: 16px;
+  font-size: 12px;
+  cursor: pointer;
+  color: #666;
+  transition: all 0.2s;
+}
+
+.lang-btn.active {
+  background: var(--primary);
+  color: #fff;
+}
+
+.lang-btn:hover:not(.active) {
+  background: #ddd;
+}
+
 /* ===== 主导航栏 ===== */
 .main-nav {
   background: #fff;
