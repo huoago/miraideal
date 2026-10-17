@@ -1,0 +1,464 @@
+/* ===== MiraIdeal - Estilos Globales ===== */
+:root {
+  --primary: #FF6B35;
+  --primary-dark: #E55A2B;
+  --secondary: #2D3436;
+  --accent: #E74C3C;
+  --success: #27AE60;
+  --light: #F8F9FA;
+  --gray: #6C757D;
+  --border: #E9ECEF;
+  --shadow: 0 2px 12px rgba(0,0,0,0.08);
+  --radius: 12px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: var(--secondary);
+  background: var(--light);
+  line-height: 1.6;
+}
+
+a { color: var(--primary); text-decoration: none; transition: color 0.2s; }
+a:hover { color: var(--primary-dark); }
+
+img { max-width: 100%; height: auto; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== Header ===== */
+.header {
+  background: #fff;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--secondary);
+}
+
+.logo span { color: var(--primary); }
+
+.nav {
+  display: flex;
+  gap: 24px;
+}
+
+.nav a {
+  color: var(--secondary);
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.nav a:hover { color: var(--primary); }
+
+/* ===== Hero ===== */
+.hero {
+  background: linear-gradient(135deg, #FF6B35 0%, #E74C3C 100%);
+  color: #fff;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  font-size: 18px;
+  opacity: 0.95;
+  max-width: 600px;
+  margin: 0 auto 24px;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.2);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* ===== Secciones ===== */
+.section {
+  padding: 48px 0;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-title::before {
+  content: '';
+  width: 4px;
+  height: 24px;
+  background: var(--primary);
+  border-radius: 2px;
+}
+
+/* ===== Categorías ===== */
+.categorias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.categoria-card {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 24px 16px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s;
+}
+
+.categoria-card:hover {
+  transform: translateY(-4px);
+}
+
+.categoria-icon {
+  font-size: 36px;
+  margin-bottom: 8px;
+}
+
+.categoria-card h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--secondary);
+}
+
+/* ===== Artículos Grid ===== */
+.articulos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.articulo-card {
+  background: #fff;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s;
+}
+
+.articulo-card:hover {
+  transform: translateY(-4px);
+}
+
+.articulo-img {
+  height: 180px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  color: #fff;
+}
+
+.articulo-img.electronica { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+.articulo-img.hogar { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
+.articulo-img.ofertas { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
+.articulo-img.gaming { background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%); }
+
+.articulo-body {
+  padding: 20px;
+}
+
+.articulo-tag {
+  display: inline-block;
+  background: #FFF0E8;
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.articulo-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.articulo-card h3 a {
+  color: var(--secondary);
+}
+
+.articulo-card h3 a:hover {
+  color: var(--primary);
+}
+
+.articulo-excerpt {
+  font-size: 14px;
+  color: var(--gray);
+  margin-bottom: 16px;
+}
+
+.articulo-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: var(--gray);
+}
+
+.precio-badge {
+  background: #E8F8EF;
+  color: var(--success);
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.descuento-badge {
+  background: #FDEDEC;
+  color: var(--accent);
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+/* ===== Ofertas Destacadas ===== */
+.ofertas-list {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.oferta-item {
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+  gap: 16px;
+}
+
+.oferta-item:last-child { border-bottom: none; }
+
+.oferta-store {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  background: var(--light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--gray);
+  flex-shrink: 0;
+}
+
+.oferta-info { flex: 1; }
+
+.oferta-info h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.oferta-info p {
+  font-size: 13px;
+  color: var(--gray);
+}
+
+.oferta-precio {
+  text-align: right;
+}
+
+.oferta-precio .precio-actual {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--secondary);
+}
+
+.oferta-precio .precio-anterior {
+  font-size: 13px;
+  color: var(--gray);
+  text-decoration: line-through;
+}
+
+.btn-oferta {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-left: 12px;
+}
+
+.btn-oferta:hover {
+  background: var(--primary-dark);
+  color: #fff;
+}
+
+/* ===== Artículo Detalle ===== */
+.articulo-detalle {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 40px;
+  margin: 32px 0;
+}
+
+.articulo-detalle h1 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.articulo-detalle .meta {
+  display: flex;
+  gap: 16px;
+  color: var(--gray);
+  font-size: 14px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.articulo-detalle .contenido {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.articulo-detalle .contenido h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 32px 0 16px;
+}
+
+.articulo-detalle .contenido p {
+  margin-bottom: 16px;
+}
+
+.articulo-detalle .contenido ul {
+  margin: 16px 0 16px 24px;
+}
+
+.articulo-detalle .contenido li {
+  margin-bottom: 8px;
+}
+
+.tabla-comparativa {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px 0;
+}
+
+.tabla-comparativa th,
+.tabla-comparativa td {
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  text-align: left;
+  font-size: 14px;
+}
+
+.tabla-comparativa th {
+  background: var(--light);
+  font-weight: 600;
+}
+
+.tabla-comparativa td.mejor {
+  background: #E8F8EF;
+  font-weight: 600;
+}
+
+.cta-box {
+  background: #FFF0E8;
+  border-left: 4px solid var(--primary);
+  padding: 20px;
+  border-radius: 0 8px 8px 0;
+  margin: 24px 0;
+}
+
+.cta-box h4 {
+  margin-bottom: 8px;
+  color: var(--primary);
+}
+
+/* ===== Footer ===== */
+.footer {
+  background: var(--secondary);
+  color: #adb5bd;
+  padding: 48px 0 24px;
+  margin-top: 48px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 32px;
+}
+
+.footer h4 {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.footer ul { list-style: none; }
+
+.footer ul li { margin-bottom: 8px; }
+
+.footer a {
+  color: #adb5bd;
+  font-size: 14px;
+}
+
+.footer a:hover { color: #fff; }
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 24px;
+  border-top: 1px solid #495057;
+  font-size: 13px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .nav { display: none; }
+  .hero h1 { font-size: 26px; }
+  .hero { padding: 40px 0; }
+  .articulos-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .oferta-item { flex-wrap: wrap; }
+  .articulo-detalle { padding: 24px; }
+}
