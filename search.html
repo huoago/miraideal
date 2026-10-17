@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscar | MiraIdeal</title>
+  <meta name="description" content="Busca guías de compra y comparativas de productos en MiraIdeal.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .search-box {
+      max-width: 600px;
+      margin: 40px auto;
+    }
+    .search-input {
+      width: 100%;
+      padding: 16px 20px;
+      font-size: 18px;
+      border: 2px solid var(--border);
+      border-radius: 12px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .search-input:focus {
+      border-color: var(--primary);
+    }
+    .search-results {
+      margin-top: 32px;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Mira<span>Ideal</span></a>
+      <nav class="nav">
+        <a href="index.html#ofertas">Ofertas</a>
+        <a href="index.html#categorias">Categorías</a>
+        <a href="index.html#guias">Guías de Compra</a>
+        <a href="search.html">Buscar</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="search-box">
+      <h1 style="text-align: center; margin-bottom: 24px;">🔍 Buscar guías de compra</h1>
+      <input type="text" id="searchInput" class="search-input" placeholder="Ej: laptops, TV, audífonos...">
+    </div>
+
+    <div class="search-results" id="searchResults">
+      <p style="text-align:center; padding: 40px; color: var(--gray);">Escribe algo para buscar...</p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">© 2026 MiraIdeal.com · Hecho en Perú 🇵🇪</div>
+    </div>
+  </footer>
+
+  <script src="search-data.js"></script>
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const searchResults = document.getElementById('searchResults');
+    
+    searchInput.addEventListener('input', function() {
+      const results = searchArticles(this.value);
+      renderSearchResults(results, 'searchResults');
+    });
+    
+    // 回车触发搜索
+    searchInput.addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        const results = searchArticles(this.value);
+        renderSearchResults(results, 'searchResults');
+      }
+    });
+  </script>
+</body>
+</html>
