@@ -13,11 +13,15 @@
   <header class="header">
     <div class="container header-inner">
       <a href="index.html" class="logo">Mira<span>Ideal</span></a>
+      
+      <div class="header-search">
+        <input type="text" placeholder="Busca productos, marcas o categorías..." onkeypress="if(event.key==='Enter')window.location.href='search.html?q='+this.value">
+      </div>
+      
       <nav class="nav">
         <a href="#ofertas">Ofertas</a>
-        <a href="#categorias">Categorías</a>
-        <a href="#guias">Guías de Compra</a>
-        <a href="articulos/black-friday-2026-peru.html">Black Friday</a>
+        <a href="#guias">Guías</a>
+        <a href="search.html">Buscar</a>
       </nav>
     </div>
   </header>
