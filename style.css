@@ -1,50 +1,42 @@
-/* ===== MiraIdeal - Estilos Modernizados ===== */
+/* ===== MiraIdeal - 完全参考什么值得买设计风格 ===== */
 :root {
-  --primary: #FF6B35;
-  --primary-dark: #E55A2B;
-  --secondary: #1a1a2e;
-  --accent: #E74C3C;
-  --success: #27AE60;
-  --light: #f5f7fa;
-  --gray: #6c757d;
-  --border: #e9ecef;
-  --shadow: 0 2px 16px rgba(0,0,0,0.06);
-  --shadow-hover: 0 8px 30px rgba(0,0,0,0.12);
-  --radius: 16px;
-  --radius-sm: 8px;
+  --primary: #E74C3C;
+  --primary-dark: #C0392B;
+  --secondary: #2c3e50;
+  --light: #f5f5f5;
+  --gray: #95a5a6;
+  --border: #eee;
+  --shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  color: var(--secondary);
+  color: #333;
   background: var(--light);
   line-height: 1.6;
 }
 
-a { color: var(--primary); text-decoration: none; transition: all 0.2s; }
+a { color: var(--primary); text-decoration: none; }
 a:hover { color: var(--primary-dark); }
-
-img { max-width: 100%; height: auto; }
 
 .container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 20px;
 }
 
-/* ===== Header Mejorado ===== */
-.header {
+/* ===== 顶部Header - 参考什么值得买 ===== */
+.top-header {
   background: #fff;
-  box-shadow: var(--shadow);
+  border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
   z-index: 100;
-  backdrop-filter: blur(10px);
 }
 
-.header-inner {
+.top-header-inner {
   display: flex;
   align-items: center;
   gap: 32px;
@@ -52,490 +44,428 @@ img { max-width: 100%; height: auto; }
 }
 
 .logo {
-  font-size: 24px;
-  font-weight: 800;
-  color: var(--secondary);
-  white-space: nowrap;
-}
-
-.logo span { color: var(--primary); }
-
-/* 顶部大搜索框 */
-.header-search {
-  flex: 1;
-  max-width: 600px;
-}
-
-.header-search input {
-  width: 100%;
-  padding: 12px 20px;
-  border: 2px solid var(--border);
-  border-radius: 50px;
-  font-size: 15px;
-  outline: none;
-  transition: border-color 0.2s;
-  background: var(--light);
-}
-
-.header-search input:focus {
-  border-color: var(--primary);
-  background: #fff;
-}
-
-.nav {
-  display: flex;
-  gap: 24px;
-  white-space: nowrap;
-}
-
-.nav a {
-  color: var(--secondary);
-  font-weight: 500;
-  font-size: 15px;
-}
-
-.nav a:hover { color: var(--primary); }
-
-/* ===== Hero Mejorado ===== */
-.hero {
-  background: linear-gradient(135deg, #FF6B35 0%, #E74C3C 100%);
-  color: #fff;
-  padding: 50px 0;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 32px;
-  font-weight: 800;
-  margin-bottom: 12px;
-}
-
-.hero p {
-  font-size: 17px;
-  opacity: 0.95;
-  max-width: 600px;
-  margin: 0 auto 20px;
-}
-
-.hero-badge {
-  display: inline-block;
-  background: rgba(255,255,255,0.2);
-  padding: 6px 16px;
-  border-radius: 20px;
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 16px;
-}
-
-/* ===== Layout Principal - 双栏布局 ===== */
-.main-layout {
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 32px;
-  margin: 32px 0;
-}
-
-/* 左侧分类侧边栏 */
-.sidebar {
-  background: #fff;
-  border-radius: var(--radius);
-  padding: 24px;
-  box-shadow: var(--shadow);
-  height: fit-content;
-  position: sticky;
-  top: 90px;
-}
-
-.sidebar h3 {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--gray);
-  text-transform: uppercase;
-  margin-bottom: 16px;
-}
-
-.sidebar-categories {
-  list-style: none;
-}
-
-.sidebar-categories li {
-  margin-bottom: 4px;
-}
-
-.sidebar-categories a {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 10px 12px;
-  border-radius: var(--radius-sm);
-  color: var(--secondary);
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.top-search {
+  flex: 1;
+  max-width: 600px;
+  display: flex;
+  border: 2px solid var(--primary);
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.top-search input {
+  flex: 1;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.search-btn {
+  padding: 0 20px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* ===== 主导航栏 ===== */
+.main-nav {
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+}
+
+.main-nav .container {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-item {
+  padding: 14px 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: #666;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-item:hover, .nav-item.active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+/* ===== 主内容双栏布局 ===== */
+.main-container {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 24px;
+  margin: 24px auto;
+}
+
+/* ===== 左侧分类侧边栏 ===== */
+.sidebar {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: var(--shadow);
+  height: fit-content;
+  position: sticky;
+  top: 120px;
+}
+
+.sidebar-section {
+  margin-bottom: 24px;
+}
+
+.sidebar-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.sidebar-list {
+  list-style: none;
+}
+
+.sidebar-list li {
+  margin-bottom: 2px;
+}
+
+.sidebar-list a {
+  display: block;
+  padding: 8px 10px;
+  border-radius: 6px;
+  color: #666;
   font-size: 14px;
   transition: all 0.2s;
 }
 
-.sidebar-categories a:hover {
-  background: var(--light);
+.sidebar-list a:hover {
+  background: #fff5f5;
   color: var(--primary);
 }
 
-.sidebar-categories a.active {
-  background: #fff3ee;
-  color: var(--primary);
-  font-weight: 600;
+/* ===== 右侧主内容区 ===== */
+.main-content {
+  min-width: 0;
 }
 
-/* ===== Secciones ===== */
+/* Hero Banner */
+.hero-banner {
+  background: linear-gradient(135deg, var(--primary) 0%, #ff7675 100%);
+  color: #fff;
+  padding: 32px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.hero-banner h1 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.hero-banner p {
+  opacity: 0.95;
+  font-size: 14px;
+}
+
+/* Section标题 */
 .section {
-  padding: 40px 0;
+  margin-bottom: 32px;
 }
 
 .section-title {
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 24px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  padding-left: 12px;
+  border-left: 4px solid var(--primary);
 }
 
-.section-title::before {
-  content: '';
-  width: 4px;
-  height: 24px;
-  background: var(--primary);
-  border-radius: 2px;
-}
-
-/* ===== Tarjetas de Ofertas - Mejoradas ===== */
-.ofertas-grid {
+/* ===== 好价商品卡片 ===== */
+.deals-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
 }
 
-.oferta-card {
+.deal-card {
   background: #fff;
-  border-radius: var(--radius);
-  padding: 20px;
+  border-radius: 8px;
+  overflow: hidden;
   box-shadow: var(--shadow);
-  transition: all 0.3s;
-  border: 1px solid transparent;
+  transition: all 0.2s;
 }
 
-.oferta-card:hover {
-  box-shadow: var(--shadow-hover);
-  transform: translateY(-4px);
-  border-color: var(--primary);
+.deal-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
 }
 
-.oferta-store-badge {
-  display: inline-block;
-  padding: 4px 10px;
-  border-radius: 6px;
+.deal-store {
+  padding: 6px 12px;
   font-size: 12px;
   font-weight: 600;
-  margin-bottom: 12px;
+  color: #fff;
 }
 
 .store-ML { background: #ffe600; color: #333; }
-.store-FA { background: #e4002b; color: #fff; }
-.store-RP { background: #0033a0; color: #fff; }
+.store-FA { background: #e4002b; }
+.store-RP { background: #0033a0; }
 
-.oferta-title {
-  font-size: 15px;
-  font-weight: 600;
-  margin-bottom: 12px;
+.deal-product {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+}
+
+.deal-icon {
+  font-size: 40px;
+  width: 60px;
+  height: 60px;
+  background: var(--light);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.deal-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.deal-info h3 {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
   line-height: 1.4;
 }
 
-.oferta-price-row {
+.deal-price-row {
   display: flex;
   align-items: baseline;
-  gap: 10px;
-  margin-bottom: 16px;
+  gap: 8px;
+  margin-bottom: 12px;
 }
 
-.oferta-price-now {
-  font-size: 24px;
-  font-weight: 800;
-  color: var(--accent);
+.deal-price-now {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary);
 }
 
-.oferta-price-old {
-  font-size: 14px;
+.deal-price-old {
+  font-size: 13px;
   color: var(--gray);
   text-decoration: line-through;
 }
 
-.oferta-discount {
-  display: inline-block;
+.deal-discount {
   background: #ffeaea;
-  color: var(--accent);
+  color: var(--primary);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.deal-btn {
+  display: inline-block;
+  padding: 6px 16px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.deal-btn:hover {
+  background: var(--primary-dark);
+  color: #fff;
+}
+
+/* ===== 文章列表 ===== */
+.articles-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.article-item {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  transition: all 0.2s;
+}
+
+.article-item:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.article-tag {
+  display: inline-block;
+  background: #fff5f5;
+  color: var(--primary);
   padding: 2px 8px;
   border-radius: 4px;
   font-size: 12px;
-  font-weight: 700;
-}
-
-.btn-oferta {
-  display: block;
-  width: 100%;
-  padding: 12px;
-  background: var(--primary);
-  color: #fff;
-  text-align: center;
-  border-radius: var(--radius-sm);
-  font-weight: 600;
-  transition: all 0.2s;
-}
-
-.btn-oferta:hover {
-  background: var(--primary-dark);
-  color: #fff;
-  transform: scale(1.02);
-}
-
-/* ===== Categorías - Mejoradas ===== */
-.categorias-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  gap: 16px;
-}
-
-.categoria-card {
-  background: #fff;
-  border-radius: var(--radius);
-  padding: 24px 16px;
-  text-align: center;
-  box-shadow: var(--shadow);
-  transition: all 0.3s;
-}
-
-.categoria-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-hover);
-}
-
-.categoria-icon {
-  font-size: 32px;
+  font-weight: 500;
   margin-bottom: 8px;
 }
 
-.categoria-card h3 {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--secondary);
-}
-
-/* ===== Artículos - Mejoradas ===== */
-.articulos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 24px;
-}
-
-.articulo-card {
-  background: #fff;
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow);
-  transition: all 0.3s;
-}
-
-.articulo-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-hover);
-}
-
-.articulo-img {
-  height: 140px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 48px;
-}
-
-.articulo-body {
-  padding: 20px;
-}
-
-.articulo-tag {
-  display: inline-block;
-  background: #fff3ee;
-  color: var(--primary);
-  padding: 4px 10px;
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: 600;
-  margin-bottom: 12px;
-}
-
-.articulo-card h3 {
+.article-item h3 {
   font-size: 16px;
   font-weight: 600;
-  margin-bottom: 8px;
-  line-height: 1.4;
+  margin-bottom: 6px;
+  color: #333;
 }
 
-.articulo-card h3 a {
-  color: var(--secondary);
-}
-
-.articulo-card h3 a:hover {
+.article-item:hover h3 {
   color: var(--primary);
 }
 
-.articulo-excerpt {
+.article-excerpt {
   font-size: 14px;
-  color: var(--gray);
-  margin-bottom: 12px;
+  color: #666;
+  margin-bottom: 8px;
   line-height: 1.5;
 }
 
-.articulo-meta {
+.article-meta {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 13px;
+  gap: 16px;
+  font-size: 12px;
   color: var(--gray);
 }
 
-/* ===== Newsletter ===== */
-.newsletter-section {
-  background: linear-gradient(135deg, #FF6B35 0%, #E74C3C 100%);
-  border-radius: var(--radius);
-  padding: 40px;
+/* ===== 邮件订阅 ===== */
+.newsletter-box {
+  background: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: var(--shadow);
   text-align: center;
-  color: #fff;
-  margin: 40px 0;
 }
 
-.newsletter-section h2 {
-  font-size: 24px;
-  margin-bottom: 12px;
+.newsletter-box h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
 }
 
-.newsletter-section p {
-  opacity: 0.95;
-  margin-bottom: 24px;
+.newsletter-box p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 16px;
 }
 
-.newsletter-form {
-  max-width: 450px;
-  margin: 0 auto;
+.newsletter-box form {
   display: flex;
   gap: 8px;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
-.newsletter-form input {
+.newsletter-box input {
   flex: 1;
-  padding: 14px 20px;
-  border: none;
-  border-radius: 50px;
-  font-size: 14px;
+  padding: 10px 16px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
   outline: none;
 }
 
-.newsletter-form button {
-  padding: 14px 28px;
-  background: var(--secondary);
+.newsletter-box button {
+  padding: 10px 20px;
+  background: var(--primary);
   color: #fff;
   border: none;
-  border-radius: 50px;
-  font-weight: 600;
+  border-radius: 4px;
   cursor: pointer;
-  transition: all 0.2s;
-}
-
-.newsletter-form button:hover {
-  background: #000;
 }
 
 /* ===== Footer ===== */
 .footer {
-  background: var(--secondary);
-  color: #adb5bd;
-  padding: 48px 0 24px;
-  margin-top: 60px;
+  background: #fff;
+  border-top: 1px solid var(--border);
+  padding: 32px 0;
+  margin-top: 40px;
 }
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 40px;
-  margin-bottom: 32px;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 24px;
 }
 
 .footer h4 {
-  color: #fff;
-  font-size: 15px;
-  font-weight: 600;
-  margin-bottom: 16px;
+  font-size: 14px;
+  margin-bottom: 12px;
 }
 
 .footer ul { list-style: none; }
-.footer ul li { margin-bottom: 8px; }
-.footer a { color: #adb5bd; font-size: 14px; }
-.footer a:hover { color: #fff; }
+.footer ul li { margin-bottom: 6px; }
+.footer a { color: #666; font-size: 13px; }
+.footer a:hover { color: var(--primary); }
 
 .footer-bottom {
   text-align: center;
-  padding-top: 24px;
-  border-top: 1px solid #343a40;
-  color: #adb5bd;
-  font-size: 13px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--gray);
 }
 
-/* ===== Back to Top Button ===== */
-#backToTop {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: var(--primary);
-  color: white;
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  z-index: 999;
-}
-
-#backToTop.visible {
-  opacity: 1;
-  visibility: visible;
-}
-
-#backToTop:hover {
-  background: var(--secondary);
-  transform: translateY(-2px);
-}
-
-/* ===== Responsive ===== */
+/* ===== 响应式 ===== */
 @media (max-width: 968px) {
-  .main-layout {
+  .main-container {
     grid-template-columns: 1fr;
   }
   
   .sidebar {
-    position: static;
+    display: none;
   }
   
-  .header-search {
-    display: none;
+  .deals-grid {
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 768px) {
-  .nav { display: none; }
-  .hero h1 { font-size: 26px; }
-  .hero { padding: 40px 0; }
-  .articulos-grid { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
-  .newsletter-form { flex-direction: column; }
+  .top-search {
+    display: none;
+  }
+  
+  .main-nav .container {
+    overflow-x: auto;
+  }
 }
