@@ -63,6 +63,15 @@
     const searchInput = document.getElementById('searchInput');
     const searchResults = document.getElementById('searchResults');
     
+    // 从URL参数读取搜索词
+    const urlParams = new URLSearchParams(window.location.search);
+    const queryParam = urlParams.get('q');
+    if (queryParam) {
+      searchInput.value = queryParam;
+      const results = searchArticles(queryParam);
+      renderSearchResults(results, 'searchResults');
+    }
+    
     searchInput.addEventListener('input', function() {
       const results = searchArticles(this.value);
       renderSearchResults(results, 'searchResults');
