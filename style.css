@@ -502,3 +502,139 @@ a:hover { color: var(--primary-dark); }
     overflow-x: auto;
   }
 }
+
+/* ===== 文章详情页样式 ===== */
+.articulo-detalle {
+  background: #fff;
+  border-radius: 8px;
+  padding: 32px;
+  box-shadow: var(--shadow);
+  margin: 24px 0;
+}
+
+.articulo-detalle h1 {
+  font-size: 28px;
+  line-height: 1.3;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.articulo-detalle h2 {
+  font-size: 22px;
+  margin: 28px 0 12px;
+  color: #222;
+  padding-left: 12px;
+  border-left: 4px solid var(--primary);
+}
+
+.articulo-detalle h3 {
+  font-size: 18px;
+  margin: 20px 0 8px;
+  color: #333;
+}
+
+.articulo-detalle p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 12px;
+}
+
+.articulo-detalle .meta {
+  display: flex;
+  gap: 16px;
+  font-size: 13px;
+  color: var(--gray);
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.articulo-detalle .cta-box {
+  background: #fff8f5;
+  border: 1px solid #ffe0d1;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin: 16px 0;
+}
+
+.articulo-detalle .cta-box h4 {
+  color: var(--primary);
+  margin-bottom: 6px;
+  font-size: 15px;
+}
+
+.articulo-detalle .cta-box p {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+.btn-oferta {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 8px 0;
+}
+
+.btn-oferta:hover {
+  background: var(--primary-dark);
+  color: #fff;
+}
+
+.tabla-comparativa {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 14px;
+}
+
+.tabla-comparativa th,
+.tabla-comparativa td {
+  border: 1px solid var(--border);
+  padding: 10px 12px;
+  text-align: left;
+}
+
+.tabla-comparativa th {
+  background: #fafafa;
+  font-weight: 600;
+}
+
+.tabla-comparativa td.mejor {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.articulo-detalle ul, .articulo-detalle ol {
+  margin: 12px 0 12px 24px;
+  line-height: 1.8;
+}
+
+.articulo-detalle strong {
+  color: #222;
+}
+
+/* 搜索页样式 */
+.search-box {
+  max-width: 600px;
+  margin: 40px auto;
+}
+.search-input {
+  width: 100%;
+  padding: 16px 20px;
+  font-size: 18px;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.search-input:focus {
+  border-color: var(--primary);
+}
+.search-results {
+  margin-top: 32px;
+}

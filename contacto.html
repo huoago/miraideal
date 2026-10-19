@@ -8,16 +8,37 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo">Mira<span>Ideal</span></a>
-      <nav class="nav">
-        <a href="index.html#ofertas">Ofertas</a>
-        <a href="index.html#categorias">Categorías</a>
-        <a href="index.html#guias">Guías de Compra</a>
-      </nav>
+    <header class="top-header">
+    <div class="container top-header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">M</span>
+        <span class="logo-text">Mira<strong>Ideal</strong></span>
+      </a>
+      
+      <div class="top-search">
+        <input type="text" data-i18n-placeholder="searchPlaceholder" placeholder="Busca productos, marcas o tiendas..." onkeypress="if(event.key==='Enter')window.location.href='search.html?q='+this.value">
+        <button class="search-btn">🔍</button>
+      </div>
+      
+      <div class="top-user">
+        <div class="lang-switcher">
+          <button class="lang-btn" data-lang="es">ES</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="zh">中文</button>
+        </div>
+      </div>
     </div>
   </header>
+
+  <!-- 主导航栏 -->
+  <nav class="main-nav">
+    <div class="container">
+      <a href="index.html" class="nav-item active" data-i18n="navHome">Inicio</a>
+      <a href="index.html#ofertas" class="nav-item" data-i18n="navDeals">Ofertas</a>
+      <a href="index.html#guias" class="nav-item" data-i18n="navGuides">Guías</a>
+      <a href="black-friday-2026-peru.html" class="nav-item" data-i18n="navBlackFriday">Black Friday</a>
+    </div>
+  </nav>
 
   <div class="container">
     <article class="articulo-detalle">
@@ -43,11 +64,34 @@
     </article>
   </div>
 
-  <footer class="footer">
+    <footer class="footer">
     <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>MiraIdeal</h4>
+          <p style="font-size: 14px; line-height: 1.7;">Comparamos precios de las principales tiendas de Perú para que compres mejor.</p>
+        </div>
+        <div>
+          <h4>Categorías</h4>
+          <ul>
+            <li><a href="search.html?q=celular">Celulares</a></li>
+            <li><a href="search.html?q=laptop">Laptops</a></li>
+            <li><a href="search.html?q=tv">Televisores</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Información</h4>
+          <ul>
+            <li><a href="about.html">Nosotros</a></li>
+            <li><a href="affiliate-disclosure.html">Divulgación</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
       <div class="footer-bottom">© 2026 MiraIdeal.com · Hecho en Perú 🇵🇪</div>
     </div>
   </footer>
   <script src="main.js"></script>
+  <script src="i18n.js"></script>
 </body>
 </html>
